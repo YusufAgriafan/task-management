@@ -18,7 +18,7 @@ class UserController extends Controller
             'name' => 'required|string',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:6',
-            'avatar' => 'nullable|image|mimes:jpeg,png,jpg|max:1024', // Menambahkan ukuran maksimal untuk avatar
+            'avatar' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
         ]);
     
         if ($request->hasFile('avatar')) {
